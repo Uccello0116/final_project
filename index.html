@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zihe Zhou — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+
+<body>
+
+  <div class="cursor" id="cur" aria-hidden="true"></div>
+  <div class="cursor-ring" id="ring" aria-hidden="true"></div>
+
+  <nav id="nav" aria-label="Main navigation">
+    <a href="#home" class="nav-logo" aria-label="Zihe Zhou — home"> </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#works" data-zh="作品" data-en="Works">作品</a></li>
+        <li><a href="#about" data-zh="关于" data-en="About">关于</a></li>
+        <li><a href="#contact" data-zh="联系" data-en="Contact">联系</a></li>
+      </ul>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn active" id="btnZh" onclick="setLang('zh')" aria-pressed="true" aria-label="切换为中文">中</button>
+        <button class="lang-btn" id="btnEn" onclick="setLang('en')" aria-pressed="false" aria-label="Switch to English">EN</button>
+      </div>
+      <div class="font-size-toggle" role="group" aria-label="Font size">
+        <button class="font-btn" onclick="changeFontSize(-1)" aria-label="Decrease font size">A−</button>
+        <button class="font-btn" onclick="changeFontSize(1)" aria-label="Increase font size">A+</button>
+      </div>
+      <button class="hamburger" id="ham" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Mobile navigation">
+    <ul class="nav-links">
+      <li><a href="#works" data-zh="作品" data-en="Works" onclick="closeDrawer()">作品</a></li>
+      <li><a href="#about" data-zh="关于" data-en="About" onclick="closeDrawer()">关于</a></li>
+      <li><a href="#contact" data-zh="联系" data-en="Contact" onclick="closeDrawer()">联系</a></li>
+    </ul>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button class="lang-btn active" onclick="setLang('zh');closeDrawer()" aria-label="切换为中文">中</button>
+      <button class="lang-btn" onclick="setLang('en');closeDrawer()" aria-label="Switch to English">EN</button>
+    </div>
+  </div>
+
+  <main id="main">
+  <section class="hero" id="home" aria-label="Introduction">
+    <div class="hero-text">
+      <p class="hero-eyebrow" data-zh="设计与创作作品集 · 2024–2026" data-en="Design &amp; Creative Portfolio · 2024–2026">设计与创作作品集 · 2024–2026</p>
+      <h1 class="hero-name">Zhou<br><em>Zihe</em><br>周子禾</h1>
+      <p class="hero-sub" data-zh="UX 设计师 · 创作者<br>密歇根大学信息学院<br>专注用户体验与交互设计，<br>用研究与细节讲述有温度的故事。" data-en="UX Designer · Creative<br>University of Michigan, School of Information<br>Focused on experience design &amp; interaction,<br>telling meaningful stories through research.">UX 设计师 · 创作者<br>密歇根大学信息学院<br>专注用户体验与交互设计，<br>用研究与细节讲述有温度的故事。</p>
+      <a href="#works" class="hero-cta">
+        <span data-zh="查看作品" data-en="View Works">查看作品</span>
+        <span class="arr" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="hero-right" aria-hidden="true">
+      <div class="hero-number">'26</div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true"><span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section class="section" id="works" aria-labelledby="works-title">
+    <div class="sec-label" data-zh="精选作品" data-en="Selected Works" aria-hidden="true">精选作品</div>
+    <h2 class="sec-title reveal" id="works-title" data-zh="设计探索<br>与创作实践" data-en="Design Exploration<br>&amp; Creative Practice">设计探索<br>与创作实践</h2>
+
+    <div class="works-featured">
+      <a href="gut.html" class="work-card reveal" aria-label="Open Gut Feelings project">
+        <div class="card-img">
+          <img src="images/gut.jpg" alt="Gut Feelings project" style="width:100%;height:100%;object-fit:cover">
+          <div class="card-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag" data-zh="UX 设计 · 高保真原型" data-en="UX Design · Hi-Fi Prototype">UX 设计 · 高保真原型</p>
+          <h3 class="card-title">Gut Feelings</h3>
+          <p class="card-desc" data-zh="面向 IBS 及消化敏感人群的饮食追踪 App。帮助用户记录日常饮食与肠道反应，通过数据洞察减少「今天吃什么」的反复试错压力。" data-en="A food-tracking app for people with IBS and digestive sensitivity — helping users log meals, track gut reactions, and use personal data to reduce the daily stress of figuring out what's safe to eat.">面向 IBS 及消化敏感人群的饮食追踪 App。帮助用户记录日常饮食与肠道反应，通过数据洞察减少「今天吃什么」的反复试错压力。</p>
+        </div>
+        <div class="card-footer">
+          <div class="card-meta"><span class="card-year">2025</span><span class="card-badge" data-zh="个人项目" data-en="Solo">个人项目</span></div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+
+      <a href="paws.html" class="work-card reveal reveal-delay-1" aria-label="Open Paws of Comfort project">
+        <div class="card-img">
+          <img src="images/paws.jpg" alt="Paws of Comfort project" style="width:100%;height:100%;object-fit:cover">
+          <div class="card-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag" data-zh="交互设计 · APP 创新" data-en="Interaction Design · App Innovation">交互设计 · APP 创新</p>
+          <h3 class="card-title">Paws of Comfort</h3>
+          <p class="card-desc" data-zh="连接流浪犬救助、治疗犬训练与情绪支持服务的平台，附智能项圈概念设计用于辅助犬只性格评估。" data-en="A platform connecting stray dog rescue, therapy dog training, and emotional support — with a smart collar concept to assess canine personality.">连接流浪犬救助、治疗犬训练与情绪支持服务的平台，附智能项圈概念设计用于辅助犬只性格评估。</p>
+        </div>
+        <div class="card-footer">
+          <div class="card-meta"><span class="card-year">2025 Spring</span><span class="card-badge" data-zh="个人项目" data-en="Solo">个人项目</span></div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="works-secondary">
+      <a href="hospipod.html" class="work-card reveal" aria-label="Open Hospipod project">
+        <div class="card-img">
+          <img src="images/hospipod.jpg" alt="Hospipod project" style="width:100%;height:100%;object-fit:cover">
+          <div class="card-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag" data-zh="交互设计 · 应用创新" data-en="Interaction Design · App Innovation">交互设计 · 应用创新</p>
+          <h3 class="card-title">Hospipod</h3>
+          <p class="card-desc" data-zh="设计用于预约胶囊陪护床的 App，将胶囊旅馆体验引入医院，为陪护家属提供更私密、更可负担的休息空间。" data-en="An app for booking capsule hospital escort beds — bringing capsule-hotel privacy into hospitals for family caregivers who need affordable, dignified rest.">设计用于预约胶囊陪护床的 App，将胶囊旅馆体验引入医院，为陪护家属提供更私密、更可负担的休息空间。</p>
+        </div>
+        <div class="card-footer">
+          <div class="card-meta"><span class="card-year">2024 Fall</span><span class="card-badge" data-zh="个人项目" data-en="Solo">个人项目</span></div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+
+      <a href="dive.html" class="work-card reveal reveal-delay-1" aria-label="Open Dive project">
+        <div class="card-img">
+          <img src="images/dive.jpg" alt="Dive project" style="width:100%;height:100%;object-fit:cover">
+          <div class="card-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag" data-zh="交互设计 · 游戏设计" data-en="Interaction Design · Game Design">交互设计 · 游戏设计</p>
+          <h3 class="card-title">Dive</h3>
+          <p class="card-desc" data-zh="以漂浮城市为背景的游戏设定设计，通过角色塑造与像素艺术，探讨人与土地分离后身份与文化记忆的流失与重寻。" data-en="A game concept set in a floating city — exploring identity, cultural memory, and the emotional bond between people and land through character design and pixel art.">以漂浮城市为背景的游戏设定设计，通过角色塑造与像素艺术，探讨人与土地分离后身份与文化记忆的流失与重寻。</p>
+        </div>
+        <div class="card-footer">
+          <div class="card-meta"><span class="card-year">2025 Spring</span><span class="card-badge" data-zh="个人项目" data-en="Solo">个人项目</span></div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="works-small">
+      <a href="vcare.html" class="work-card reveal" aria-label="Open V-Care project">
+        <div class="card-img">
+          <img src="images/v-care.jpg" alt="V-Care project" style="width:100%;height:100%;object-fit:cover">
+          <div class="card-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag" data-zh="交互设计 · VR 应用" data-en="Interaction Design · VR App">交互设计 · VR 应用</p>
+          <h3 class="card-title">V-Care</h3>
+          <p class="card-desc" data-zh="将 VR 沉浸体验引入临终关怀，通过定制化虚拟环境缓解患者离家焦虑与情绪压力。" data-en="VR immersive experiences designed for hospice care — easing end-of-life anxiety through customizable virtual environments.">将 VR 沉浸体验引入临终关怀，通过定制化虚拟环境缓解患者离家焦虑与情绪压力。</p>
+        </div>
+        <div class="card-footer">
+          <div class="card-meta"><span class="card-year">2024 Fall</span><span class="card-badge" data-zh="个人项目" data-en="Solo">个人项目</span></div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+
+      <a href="paw4care.html" class="work-card reveal reveal-delay-1" aria-label="Open Paw 4 Care project">
+        <div class="card-img">
+          <img src="images/paw4care.jpg" alt="Paw 4 Care project" style="width:100%;height:100%;object-fit:cover">
+          <div class="card-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag" data-zh="交互设计 · 桌游设计" data-en="Interaction Design · Board Game">交互设计 · 桌游设计</p>
+          <h3 class="card-title">Paw 4 Care</h3>
+          <p class="card-desc" data-zh="结合流浪犬救助知识与卡牌机制的教育类桌游，并同步探索品牌构建与商业落地路径。" data-en="An educational card game combining stray dog rescue knowledge with board game mechanics — with brand identity and business model development.">结合流浪犬救助知识与卡牌机制的教育类桌游，并同步探索品牌构建与商业落地路径。</p>
+        </div>
+        <div class="card-footer">
+          <div class="card-meta"><span class="card-year">2024 Winter</span><span class="card-badge" data-zh="团队项目" data-en="Team">团队项目</span></div>
+          <span class="card-arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section about-grid" id="about" aria-labelledby="about-title">
+    <div>
+      <div class="sec-label" data-zh="关于我" data-en="About Me" aria-hidden="true">关于我</div>
+      <h2 class="sec-title reveal" id="about-title" data-zh="你好，<br>我是周子禾" data-en="Hi,<br>I'm Zihe Zhou">你好，<br>我是周子禾</h2>
+      <div class="about-text reveal">
+        <p data-zh="我是一名 <span class='hl'>UX 设计方向</span>的研究生，就读于<span class='hl'>密歇根大学信息学院</span>，本科毕业于<span class='hl'>昆山杜克大学媒体与艺术专业</span>，并曾赴<span class='hl'>杜克大学</span>交换。" data-en="I'm a graduate student in <span class='hl'>UX Design</span> at the <span class='hl'>University of Michigan School of Information</span>, with a BA in Media &amp; Arts from <span class='hl'>Duke Kunshan University</span>, including an exchange year at <span class='hl'>Duke University</span>.">我是一名 <span class="hl">UX 设计方向</span>的研究生，就读于<span class="hl">密歇根大学信息学院</span>，本科毕业于<span class="hl">昆山杜克大学媒体与艺术专业</span>，并曾赴<span class="hl">杜克大学</span>交换。</p>
+        <p data-zh="我相信好的设计来自对真实处境的观察与共情。这里的作品涵盖 App、VR、桌游与游戏设定，每一个都从一个真实问题出发，落地为可感知的体验方案。" data-en="I believe good design starts with genuine observation and empathy. These works span apps, VR, board games, and game world-building — each grounded in a real problem and resolved into a felt experience.">我相信好的设计来自对真实处境的观察与共情。这里的作品涵盖 App、VR、桌游与游戏设定，每一个都从一个真实问题出发，落地为可感知的体验方案。</p>
+        <p data-zh="曾在<span class='hl'>上海英国商会</span>担任信息与体验设计实习生，多次入选<span class='hl'>院长优秀学生名单</span>（2023 · 2024 · 2025）。" data-en="Previously an Information &amp; Experience Design Intern at the <span class='hl'>British Chamber of Commerce Shanghai</span>. Multiple <span class='hl'>Dean's List</span> honoree (2023 · 2024 · 2025).">曾在<span class="hl">上海英国商会</span>担任信息与体验设计实习生，多次入选<span class="hl">院长优秀学生名单</span>（2023 · 2024 · 2025）。</p>
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="sec-label" style="margin-bottom:1.4rem" data-zh="教育背景" data-en="Education" aria-hidden="true">教育背景</p>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-date">Aug 2025 — now</div><div><div class="tl-school" data-zh="密歇根大学" data-en="University of Michigan">密歇根大学</div><div class="tl-deg" data-zh="信息学硕士（UX 设计方向）" data-en="MSI, UX Design">信息学硕士（UX 设计方向）</div></div></div>
+        <div class="tl-item"><div class="tl-date">Aug–Dec 2023</div><div><div class="tl-school" data-zh="杜克大学（交换）" data-en="Duke University (Exchange)">杜克大学（交换）</div><div class="tl-deg" data-zh="媒体与艺术" data-en="Media &amp; Arts">媒体与艺术</div></div></div>
+        <div class="tl-item"><div class="tl-date">Aug 2021 — May 2025</div><div><div class="tl-school" data-zh="昆山杜克大学" data-en="Duke Kunshan University">昆山杜克大学</div><div class="tl-deg" data-zh="媒体与艺术" data-en="Media &amp; Arts">媒体与艺术</div><div class="tl-award" data-zh="院长优秀学生名单 · 2023 / 2024 / 2025" data-en="Dean's List · 2023 / 2024 / 2025">院长优秀学生名单 · 2023 / 2024 / 2025</div></div></div>
+      </div>
+      <p class="sec-label" style="margin-top:2.5rem;margin-bottom:1.4rem" data-zh="工具与技能" data-en="Skills &amp; Tools" aria-hidden="true">工具与技能</p>
+      <div class="skills-grid">
+        <div class="skill-item"><span class="skill-name">Figma</span><div class="dots" role="img" aria-label="Proficiency: 5/5"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Photoshop</span><div class="dots" role="img" aria-label="Proficiency: 4/5"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></div>
+        <div class="skill-item"><span class="skill-name" data-zh="用户研究" data-en="User Research">用户研究</span><div class="dots" role="img" aria-label="Proficiency: 5/5"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Premiere Pro</span><div class="dots" role="img" aria-label="Proficiency: 3/5"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div></div>
+        <div class="skill-item"><span class="skill-name" data-zh="交互设计" data-en="Interaction Design">交互设计</span><div class="dots" role="img" aria-label="Proficiency: 5/5"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+        <div class="skill-item"><span class="skill-name" data-zh="游戏 / 桌游设计" data-en="Game Design">游戏 / 桌游设计</span><div class="dots" role="img" aria-label="Proficiency: 3/5"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="sec-label" data-zh="联系我" data-en="Get in Touch" aria-hidden="true">联系我</div>
+    <h2 class="sec-title" id="contact-title" data-zh="有想法？<br>一起聊聊。" data-en="Have an idea?<br>Let's talk.">有想法？<br>一起聊聊。</h2>
+    <p class="contact-sub" data-zh="欢迎合作 · 交流 · 任何想法" data-en="Open to collaboration · conversation · any idea">欢迎合作 · 交流 · 任何想法</p>
+    <a href="mailto:zihez@umich.edu" class="contact-email">zihez@umich.edu</a>
+  </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Zihe Zhou 周子禾</p>
+    <p data-zh="UX 设计师 · 密歇根大学" data-en="UX Designer · University of Michigan">UX 设计师 · 密歇根大学</p>
+  </footer>
+
+  <script src="js/portfolio.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paws of Comfort — Zihe Zhou</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+
+<body>
+
+  <div class="cursor" id="cur" aria-hidden="true"></div>
+  <div class="cursor-ring" id="ring" aria-hidden="true"></div>
+
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Zihe Zhou — home">ZZH</a>
+    <div class="nav-right">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#works" data-zh="作品" data-en="Works">作品</a></li>
+        <li><a href="index.html#about" data-zh="关于" data-en="About">关于</a></li>
+        <li><a href="index.html#contact" data-zh="联系" data-en="Contact">联系</a></li>
+      </ul>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn active" id="btnZh" onclick="setLang('zh')" aria-pressed="true" aria-label="切换为中文">中</button>
+        <button class="lang-btn" id="btnEn" onclick="setLang('en')" aria-pressed="false" aria-label="Switch to English">EN</button>
+      </div>
+      <div class="font-size-toggle" role="group" aria-label="Font size">
+        <button class="font-btn" onclick="changeFontSize(-1)" aria-label="Decrease font size">A−</button>
+        <button class="font-btn" onclick="changeFontSize(1)" aria-label="Increase font size">A+</button>
+      </div>
+      <button class="hamburger" id="ham" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Mobile navigation" aria-modal="false">
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#works" data-zh="作品" data-en="Works" onclick="closeDrawer()">作品</a></li>
+      <li><a href="index.html#about" data-zh="关于" data-en="About" onclick="closeDrawer()">关于</a></li>
+      <li><a href="index.html#contact" data-zh="联系" data-en="Contact" onclick="closeDrawer()">联系</a></li>
+    </ul>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button class="lang-btn active" onclick="setLang('zh');closeDrawer()" aria-label="切换为中文">中</button>
+      <button class="lang-btn" onclick="setLang('en');closeDrawer()" aria-label="Switch to English">EN</button>
+    </div>
+  </div>
+
+  <main id="main">
+    <a href="index.html" class="back-btn" aria-label="Back to portfolio">
+      <span class="arr" aria-hidden="true">←</span>
+      <span data-zh="返回作品集" data-en="Back to Portfolio">返回作品集</span>
+    </a>
+
+    <div class="proj-hero">
+      <div>
+        <div class="proj-num" aria-hidden="true">01</div>
+        <h1 class="proj-title">Paws of Comfort</h1>
+        <div class="proj-tags">
+          <span class="proj-tag" data-zh="交互设计" data-en="Interaction Design">交互设计</span><span class="proj-tag" data-zh="APP 创新设计" data-en="App Innovation">APP 创新设计</span><span class="proj-tag" data-zh="服务设计" data-en="Service Design">服务设计</span>
+        </div>
+        <p class="proj-brief" data-zh="将流浪犬救助、治疗犬训练与情绪支持服务连接起来，构建一个兼具社会价值与可持续性的治疗犬平台，为抑郁与压力人群提供情感陪伴。" data-en="A platform connecting stray dog rescue, therapy dog training, and emotional support — building a sustainable therapy dog ecosystem for people experiencing depression and stress.">将流浪犬救助、治疗犬训练与情绪支持服务连接起来，构建一个兼具社会价值与可持续性的治疗犬平台，为抑郁与压力人群提供情感陪伴。</p>
+      </div>
+      <div class="proj-meta">
+        <span><strong data-zh="时间" data-en="Year">时间</strong>2025 Spring</span><span><strong data-zh="类型" data-en="Type">类型</strong><span data-zh="个人项目" data-en="Solo Project">个人项目</span></span><span><strong data-zh="工具" data-en="Tools">工具</strong>Figma, Illustrator</span>
+      </div>
+    </div>
+
+    <div class="proj-body">
+      <h2 data-zh="设计成果" data-en="Design Outcome">设计成果</h2>
+      <img src="images/paws.jpg" alt="paws project screenshots" width="100%">
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2026 Zihe Zhou 周子禾</p>
+    <p data-zh="UX 设计师 · 密歇根大学" data-en="UX Designer · University of Michigan">UX 设计师 · 密歇根大学</p>
+  </footer>
+
+  <script src="js/portfolio.js"></script>
+</body>
+
+</html>

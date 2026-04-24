@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gut Feelings — Zihe Zhou</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+
+<body>
+
+  <div class="cursor" id="cur" aria-hidden="true"></div>
+  <div class="cursor-ring" id="ring" aria-hidden="true"></div>
+
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Zihe Zhou — home">ZZH</a>
+    <div class="nav-right">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#works" data-zh="作品" data-en="Works">作品</a></li>
+        <li><a href="index.html#about" data-zh="关于" data-en="About">关于</a></li>
+        <li><a href="index.html#contact" data-zh="联系" data-en="Contact">联系</a></li>
+      </ul>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn active" id="btnZh" onclick="setLang('zh')" aria-pressed="true" aria-label="切换为中文">中</button>
+        <button class="lang-btn" id="btnEn" onclick="setLang('en')" aria-pressed="false" aria-label="Switch to English">EN</button>
+      </div>
+      <div class="font-size-toggle" role="group" aria-label="Font size">
+        <button class="font-btn" onclick="changeFontSize(-1)" aria-label="Decrease font size">A−</button>
+        <button class="font-btn" onclick="changeFontSize(1)" aria-label="Increase font size">A+</button>
+      </div>
+      <button class="hamburger" id="ham" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Mobile navigation" aria-modal="false">
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#works" data-zh="作品" data-en="Works" onclick="closeDrawer()">作品</a></li>
+      <li><a href="index.html#about" data-zh="关于" data-en="About" onclick="closeDrawer()">关于</a></li>
+      <li><a href="index.html#contact" data-zh="联系" data-en="Contact" onclick="closeDrawer()">联系</a></li>
+    </ul>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button class="lang-btn active" onclick="setLang('zh');closeDrawer()" aria-label="切换为中文">中</button>
+      <button class="lang-btn" onclick="setLang('en');closeDrawer()" aria-label="Switch to English">EN</button>
+    </div>
+  </div>
+
+  <main id="main">
+    <a href="index.html" class="back-btn" aria-label="Back to portfolio">
+      <span class="arr" aria-hidden="true">←</span>
+      <span data-zh="返回作品集" data-en="Back to Portfolio">返回作品集</span>
+    </a>
+
+    <div class="proj-hero">
+      <div>
+        <div class="proj-num" aria-hidden="true">06</div>
+        <h1 class="proj-title">Gut Feelings</h1>
+        <div class="proj-tags">
+          <span class="proj-tag" data-zh="UX 设计" data-en="UX Design">UX 设计</span>
+          <span class="proj-tag" data-zh="高保真原型" data-en="Hi-Fi Prototype">高保真原型</span>
+          <span class="proj-tag" data-zh="移动端 App" data-en="Mobile App">移动端 App</span>
+        </div>
+        <p class="proj-brief" data-zh="IBS 影响约 10–15% 的成年人。消化敏感人群往往需要每天反复试错才能找到「安全」的食物——本项目的目标就是用数字化工具减少这种压力。" data-en="IBS affects approximately 10–15% of adults. For people with digestive sensitivity, deciding what to eat is a costly, stressful daily trial-and-error — this app aims to reduce that burden through personalized data tracking.">IBS 影响约 10–15% 的成年人。消化敏感人群往往需要每天反复试错才能找到「安全」的食物——本项目的目标就是用数字化工具减少这种压力。</p>
+      </div>
+      <div class="proj-meta">
+        <span><strong data-zh="时间" data-en="Year">时间</strong>2025</span>
+        <span><strong data-zh="类型" data-en="Type">类型</strong><span data-zh="个人项目" data-en="Solo Project">个人项目</span></span>
+        <span><strong data-zh="课程" data-en="Course">课程</strong>SI 582 Interaction Design</span>
+        <span><strong data-zh="工具" data-en="Tools">工具</strong>Figma</span>
+      </div>
+    </div>
+
+    <div class="proj-body">
+      <h2 data-zh="问题定义" data-en="Problem Statement">问题定义</h2>
+      <p data-zh="消化敏感人群面临的核心困境：触发症状的食物因人而异，且随情绪与身体状态变化。这使得「今天吃什么」变成了一个耗费精力的每日决策，而非简单的生活习惯。" data-en="The core challenge for people with digestive sensitivity: trigger foods vary by person and shift over time with mood and physical state — making 'what to eat today' an exhausting daily decision rather than a simple routine.">消化敏感人群面临的核心困境：触发症状的食物因人而异，且随情绪与身体状态变化。这使得「今天吃什么」变成了一个耗费精力的每日决策，而非简单的生活习惯。</p>
+
+      <h2 data-zh="设计成果" data-en="Design Outcome">设计成果</h2>
+      <img src="images/gut.jpg" alt="Gut Feelings app prototype screenshots" width="100%">
+
+      <h2 data-zh="设计反思" data-en="Reflection">设计反思</h2>
+      <p data-zh="如果有更多时间，我希望简化饮食记录流程、补全「自定义食材」与「导入自制菜谱」两个功能页面，并进一步打磨品牌视觉。" data-en="If I had more time, I would simplify the meal-logging flow, build out the custom ingredient and homemade recipe import screens, and develop the visual branding further.">如果有更多时间，我希望简化饮食记录流程、补全「自定义食材」与「导入自制菜谱」两个功能页面，并进一步打磨品牌视觉。</p>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2026 Zihe Zhou 周子禾</p>
+    <p data-zh="UX 设计师 · 密歇根大学" data-en="UX Designer · University of Michigan">UX 设计师 · 密歇根大学</p>
+  </footer>
+
+  <script src="js/portfolio.js"></script>
+</body>
+
+</html>
