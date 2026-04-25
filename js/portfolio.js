@@ -1,7 +1,8 @@
 const cur = document.getElementById('cur');
 const ring = document.getElementById('ring');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if (cur) {
+if (cur && !prefersReducedMotion) {
     let mx = 0, my = 0, rx = 0, ry = 0;
 
     document.addEventListener('mousemove', function (e) {
